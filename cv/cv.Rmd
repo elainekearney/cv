@@ -7,7 +7,7 @@ www: elaine-kearney.com
 email: ekearney@bu.edu
 twitter: ek_kearney
 #github: elainekearney
-aboutme: "Speech scientist focused on the sensorimotor control of speech in individuals with acquired motor speech disorders. I conduct both basic science and clincial research that capitalizes on my expertise in behavioral, computational modeling and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
+aboutme: "Speech scientist focused on the sensorimotor control of speech in individuals with and without motor speech disorders. I conduct both basic science and clincial research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
 output: vitae::awesomecv
@@ -36,16 +36,14 @@ software <- read_csv(here::here("data", "software.csv")) %>%
   arrange(desc(when)) 
 
 ## Teaching
-teaching <- read_csv(here::here("data", "teaching.csv")) %>% 
-  arrange(desc(when))
+teaching <- read_csv(here::here("data", "teaching.csv"))
 
 ## Presentations
 presentations <- read_csv(here::here("data", "presentations.csv")) %>% 
   arrange(desc(when))
 
 ## Awards
-awards <- read_csv(here::here("data", "awards.csv")) %>% 
-  arrange(desc(year))
+awards <- read_csv(here::here("data", "awards.csv"))
 
 ## Skills
 skills <- read_csv(here::here("data", "skills.csv")) %>% 
@@ -69,7 +67,7 @@ detailed_entries(edu,
 
 ```
 
-# Employment
+# Research Employment
 
 ```{r research}
 jobs %>% 
@@ -80,7 +78,6 @@ jobs %>%
     where = where,
     why = details)
 ```
-\pagebreak
 
 # Research Awards and Honors
 
@@ -102,8 +99,7 @@ service %>%
 # Publications
 *Available for download at https://www.elaine-kearney.com/publication/*
 
-**Peer-Reviewed**
-
+## Peer-Reviewed
 ```{r}
 pubs %>% 
   dplyr::filter(peer_reviewed) %>% 
@@ -116,8 +112,7 @@ pubs %>%
   )
 ```
 
-**Proceedings**
-
+## Proceedings
 ```{r}
 pubs %>% 
   dplyr::filter(proc) %>% 
@@ -130,12 +125,52 @@ pubs %>%
   )
 ```
 
-\pagebreak
-
 # Presentations
 
+## International
+
+**Invited**
 ```{r}
-presentations %>% 
+presentations %>%
+  dplyr::filter(loc=="international", invited) %>%
+  detailed_entries(what = with,
+                   when = when,
+                   with = what,
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+
+**Conference**
+```{r}
+presentations %>%
+  dplyr::filter(loc=="international", !invited) %>%
+  detailed_entries(what = with,
+                   when = when,
+                   with = what,
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+
+## National
+
+**Invited**
+```{r}
+presentations %>%
+  dplyr::filter(loc=="national", invited) %>%
+  detailed_entries(what = with,
+                   when = when,
+                   with = what,
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+**Conference**
+
+```{r}
+presentations %>%
+  dplyr::filter(loc=="national", !invited) %>%
   detailed_entries(what = with,
                    when = when,
                    with = what,
@@ -151,11 +186,28 @@ software %>%
   detailed_entries(what = with, with = what, when = when, where = where, why = why)
 ```
 
-# Teaching Experience
+# Teaching
 
+## Certificate
 ```{r}
-teaching %>% 
-  detailed_entries(what = what, when = when, with = with, where = where)
+teaching %>%
+    dplyr::filter(cert=="yes") %>%
+    detailed_entries(
+    with = role,
+    when = when,
+    what = company,
+    where = where)
+```
+## Experience
+```{r}
+teaching %>%
+    dplyr::filter(cert=="no") %>%
+    detailed_entries(
+    with = role,
+    when = when,
+    what = company,
+    where = where,
+    why = details)
 ```
 
 # Technical Skills
@@ -165,5 +217,4 @@ skills %>%
   detailed_entries(what = skill, 
                    with = category)
 ```
-
 \pagebreak
