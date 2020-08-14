@@ -1,9 +1,13 @@
-type, details
-Outreach, "Blog - with over 2.5k unique hits each year - looking at infectious disease epidemiology and dynamics, developments in `R`, tool development and reproducible research. Link: samabbott.co.uk/post"
-Organisations, Co-organiser of BristolR
-Manuscript Reviews, Journal of Open Source Software (2)
-Manuscript Reviews, Eurosurveillance (1)
-
-
-
-
+type, details,start_date,end_date,where
+Professional Associations,"Non-Clinical Member, American Speech-Language-Hearing Association (ASHA) ",2018,Present,
+Professional Associations,"Postdoctoral Member, Society for the Neurobiology of Language (SNL)",2018,Present,
+Manuscript Reviews,"American Journal of Speech-Language Pathology, Reviews: 7",2018,Present,
+Manuscript Reviews,"Journal of Speech, Language, and Hearing Research, Reviews: 6",2018,Present,
+Manuscript Reviews,"Neurorehabilitation and Neural Repair, Reviews: 2",2018,Present,
+Manuscript Reviews,"Journal of Communication Disorders, Reviews: 1",2018,Present,
+Manuscript Reviews,"Journal of Voice, Reviews: 1",2018,Present,
+Manuscript Reviews,"Clinical Linguistics & Phonetics, Reviews: 1",2018,Present,
+Conference Reviews,International Clinical Phonetics and Linguistics Association Symposium 2020/21,2019,2020,
+Conference Reviews,Boston Speech Motor Control Symposium 2019,2019,2020,
+Grant Reviews,LVST Small Student Grant,2019,2020,
+Conference Organization,"Organizing Committee, Boston Speech Motor Control Symposium 2019",April 2018,June 2019,"Boston, MA"
