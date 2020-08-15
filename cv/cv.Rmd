@@ -1,7 +1,7 @@
 ---
 name: Elaine Kearney
 position: "Postdoctoral Research Associate"
-address: "Dept. of Speech, Language, and Hearing Sciences, Boston University"
+address: "Dept. of Speech, Language & Hearing Sciences, Boston University"
 #phone: 
 www: elaine-kearney.com
 email: ekearney@bu.edu
@@ -52,6 +52,9 @@ skills <- read_csv(here::here("data", "skills.csv")) %>%
   ungroup %>% 
   unique
 
+## Affiliations
+affiliations<- read_csv(here::here("data", "affiliations.csv"))
+
 ## Service
 service <- read_csv(here::here("data", "service.csv"))
 ```
@@ -83,31 +86,44 @@ jobs %>%
 
 ```{r}
 awards %>% 
-  detailed_entries(what = with, with = what, when = when, where = where, why = amount)
+  detailed_entries(what = with, 
+                   with = what, 
+                   when = when, 
+                   where = where, 
+                   why = amount)
 ```
 
-# Professional Affiliations and Service
+# Professional Affiliations
+
+```{r}
+affiliations %>% 
+  detailed_entries(what = role,
+                   when = glue("{start_date}--{end_date}"),
+                   with = details)
+```
+# Service
 
 ```{r}
 service %>% 
-  detailed_entries(with = type,
+  detailed_entries(what = role,
                    when = glue("{start_date}--{end_date}"),
-                   why = details,
-                   where = where)
+                   with = type,
+                   why = details)
 ```
-
+\pagebreak
 # Publications
-*Available for download at https://www.elaine-kearney.com/publication/*
+*Available for download at elaine-kearney.com/publication/*
 
 ## Peer-Reviewed
 ```{r}
 pubs %>% 
-  dplyr::filter(peer_reviewed) %>% 
+  dplyr::filter(type=="peer_review") %>% 
   detailed_entries(
     what = with,
     when = when,
     with = what,
     where = where,
+    why = doi,
     .protect = TRUE
   )
 ```
@@ -115,7 +131,7 @@ pubs %>%
 ## Proceedings
 ```{r}
 pubs %>% 
-  dplyr::filter(proc) %>% 
+  dplyr::filter(type=="proceedings") %>% 
   detailed_entries(
     what = with,
     when = when,
@@ -133,9 +149,9 @@ pubs %>%
 ```{r}
 presentations %>%
   dplyr::filter(loc=="international", invited) %>%
-  detailed_entries(what = with,
+  detailed_entries(what = with, 
                    when = when,
-                   with = what,
+                   with = glue("{what} ({type})"),
                    where = where,
                    why = why,
                    .protect = TRUE)
@@ -147,7 +163,7 @@ presentations %>%
   dplyr::filter(loc=="international", !invited) %>%
   detailed_entries(what = with,
                    when = when,
-                   with = what,
+                   with = glue("{what} ({type})"),
                    where = where,
                    why = why,
                    .protect = TRUE)
@@ -161,7 +177,7 @@ presentations %>%
   dplyr::filter(loc=="national", invited) %>%
   detailed_entries(what = with,
                    when = when,
-                   with = what,
+                   with = glue("{what} ({type})"),
                    where = where,
                    why = why,
                    .protect = TRUE)
@@ -173,7 +189,7 @@ presentations %>%
   dplyr::filter(loc=="national", !invited) %>%
   detailed_entries(what = with,
                    when = when,
-                   with = what,
+                   with = glue("{what} ({type})"),
                    where = where,
                    why = why,
                    .protect = TRUE)
@@ -185,7 +201,7 @@ presentations %>%
 software %>% 
   detailed_entries(what = with, with = what, when = when, where = where, why = why)
 ```
-
+\pagebreak
 # Teaching
 
 ## Certificate
