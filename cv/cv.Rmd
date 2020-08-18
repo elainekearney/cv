@@ -7,7 +7,7 @@ www: elaine-kearney.com
 email: ekearney@bu.edu
 twitter: ek_kearney
 #github: elainekearney
-aboutme: "Speech scientist focused on the sensorimotor control of speech in individuals with and without motor speech disorders. I conduct both basic science and clincial research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
+aboutme: "Speech scientist focused on the sensorimotor control of speech production in individuals with and without motor speech disorders. I conduct both basic science and clincial research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
 output: vitae::awesomecv
@@ -39,8 +39,7 @@ software <- read_csv(here::here("data", "software.csv")) %>%
 teaching <- read_csv(here::here("data", "teaching.csv"))
 
 ## Presentations
-presentations <- read_csv(here::here("data", "presentations.csv")) %>% 
-  arrange(desc(when))
+presentations <- read_csv(here::here("data", "presentations.csv"))
 
 ## Awards
 awards <- read_csv(here::here("data", "awards.csv"))
@@ -108,11 +107,12 @@ service %>%
   detailed_entries(what = role,
                    when = glue("{start_date}--{end_date}"),
                    with = type,
-                   why = details)
+                   why = details,
+                   where = where)
 ```
 \pagebreak
 # Publications
-*Available for download at elaine-kearney.com/publication/*
+*Available for download at https://elaine-kearney.com/publication/*
 
 ## Peer-Reviewed
 ```{r}
