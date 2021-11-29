@@ -1,14 +1,18 @@
-role,type, details,start_date,end_date,where,actual_start_date
-"Co-founder, Contributor",Open Science Initiative,CSDisseminate: A grassroots initiative aimed at promoting the culture of self-archiving legal versions of research manuscripts in the field of communication sciences and disorders, July 2020,Present,https://CSDisseminate.com,
-Reviewer,Manuscript Reviews,"Journal of Speech, Language, and Hearing Research (7)",2018,Present,,
-Reviewer,Manuscript Reviews,American Journal of Speech-Language Pathology (7),2018,Present,,
-Reviewer,Manuscript Reviews,Neurorehabilitation and Neural Repair (2),2018,Present,,2019
-Reviewer,Manuscript Reviews,Journal of the Acoustical Society of America (1),2018,Present,,2020
-Reviewer,Manuscript Reviews,Cerebral Cortex (1),2018,Present,,2020
-Reviewer,Manuscript Reviews,Journal of Communication Disorders (1),2018,Present,,2020
-Reviewer,Manuscript Reviews,Journal of Voice (1),2018,Present,,2020
-Reviewer,Manuscript Reviews,Clinical Linguistics & Phonetics (1),2018,Present,,
-Reviewer,Conference Reviews,International Clinical Phonetics and Linguistics Association Symposium 2020,2019,2020,,
-Reviewer,Conference Reviews,Boston Speech Motor Control Symposium 2019,2019,2020,,
-Reviewer,Grant Reviews,LVST Small Student Grant,2019,2020,,
-Organizing Committee Member,Conference Organization,Boston Speech Motor Control Symposium 2019,  April 2018,  June 2019,,
+role,type, details,start_date,end_date,where,actual_start_date,
+"Co-founder, Contributor",Open Science Initiative,CSDisseminate: A grassroots initiative aimed at promoting the culture of self-archiving legal versions of research manuscripts in the field of communication sciences and disorders, July 2020,Present,https://CSDisseminate.com,,
+Reviewer,Manuscript Reviews,"Journal of Speech, Language, and Hearing Research (9)",2018,Present,,,
+Reviewer,Manuscript Reviews,American Journal of Speech-Language Pathology (7),2018,Present,,,
+Reviewer,Manuscript Reviews,Neurorehabilitation and Neural Repair (2),2018,Present,,2019,
+Reviewer,Manuscript Reviews,Journal of the Acoustical Society of America (1),2018,Present,,2020,
+Reviewer,Manuscript Reviews,Cerebral Cortex (2),2018,Present,,2020,
+Reviewer,Manuscript Reviews,Journal of Communication Disorders (1),2018,Present,,2020,
+Reviewer,Manuscript Reviews,Journal of Voice (1),2018,Present,,2020,
+Reviewer,Manuscript Reviews,Clinical Linguistics & Phonetics (1),2018,Present,,,
+Reviewer,Manuscript Reviews,International Journal of Speech-Language Pathology (1),2018,Present,,2021,
+Reviewer,Manuscript Reviews,Infant and Child Development (1),2018,Present,,2021,
+Reviewer,Conference Reviews,Conference on Motor Speech 2022,2019,Present,,2022,
+Reviewer,Conference Reviews,International Clinical Phonetics and Linguistics Association Symposium 2020,2019,Present,,2020,
+Reviewer,Conference Reviews,Boston Speech Motor Control Symposium 2019,2019,Present,,2019,
+Reviewer,Grant Reviews,LVST Small Student Grant,2019,2020,,,
+Organizing Committee Member,Conference Organization,American Speech-Language-Hearing Association Convention 2022 (Motor Speech Disorders in Adults Topic),2018,Present,, November 2021,Present
+Organizing Committee Member,Conference Organization,Boston Speech Motor Control Symposium 2019,2018,Present,,  April 2018,  June 2019

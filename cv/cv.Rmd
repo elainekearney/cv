@@ -6,7 +6,7 @@ address: "Dept. of Speech, Language & Hearing Sciences, Boston University"
 www: elaine-kearney.com
 email: ekearney@bu.edu
 twitter: ek_kearney
-#github: elainekearney
+github: elainekearney
 aboutme: "Speech scientist focused on the sensorimotor control of speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
@@ -56,6 +56,9 @@ affiliations<- read_csv(here::here("data", "affiliations.csv"))
 
 ## Service
 service <- read_csv(here::here("data", "service.csv"))
+
+## Mentoring
+mentor <- read_csv(here::here("data", "mentoring.csv"))
 ```
 
 # Education 
@@ -110,7 +113,6 @@ service %>%
                    why = details,
                    where = where)
 ```
-\pagebreak
 # Publications
 *Available for download at https://elaine-kearney.com/publication/*
 
@@ -194,6 +196,17 @@ presentations %>%
                    why = why,
                    .protect = TRUE)
 ```
+## Workshops
+```{r}
+presentations %>%
+  dplyr::filter(loc=="workshop") %>%
+  detailed_entries(what = with, 
+                   when = when,
+                   with = glue("{what} ({type})"),
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
 
 # Software
 
@@ -201,7 +214,16 @@ presentations %>%
 software %>% 
   detailed_entries(what = with, with = what, when = when, where = where, why = why)
 ```
-\pagebreak
+# Research Mentoring
+```{r}
+mentor %>% 
+  detailed_entries(what = uni, 
+                   with = student, 
+                   when = when, 
+                   where = where, 
+                   why = details)
+```
+
 # Teaching
 
 ## Certificate
