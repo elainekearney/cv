@@ -130,10 +130,37 @@ pubs %>%
   )
 ```
 
+## Submitted
+```{r}
+pubs %>% 
+  dplyr::filter(type=="submitted") %>% 
+  detailed_entries(
+    what = with,
+    when = when,
+    with = what,
+    where = where,
+    why = doi,
+    .protect = TRUE
+  )
+```
+
 ## Proceedings
 ```{r}
 pubs %>% 
   dplyr::filter(type=="proceedings") %>% 
+  detailed_entries(
+    what = with,
+    when = when,
+    with = what,
+    where = where,
+    .protect = TRUE
+  )
+```
+
+## Editorials
+```{r}
+pubs %>% 
+  dplyr::filter(type=="editorial") %>% 
   detailed_entries(
     what = with,
     when = when,
