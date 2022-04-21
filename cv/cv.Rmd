@@ -1,10 +1,10 @@
 ---
 name: Elaine Kearney
-position: "Postdoctoral Research Associate"
-address: "Dept. of Speech, Language & Hearing Sciences, Boston University"
+position: "Speech Scientist"
+address: "Brisbane, Australia"
 #phone: 
 www: elaine-kearney.com
-email: ekearney@bu.edu
+email: elainek.kearney@gmail.com
 twitter: ek_kearney
 github: elainekearney
 aboutme: "Speech scientist focused on the sensorimotor control of speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
@@ -274,6 +274,8 @@ teaching %>%
     where = where,
     why = details)
 ```
+
+
 
 # Technical Skills
 
