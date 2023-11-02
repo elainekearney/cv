@@ -41,6 +41,9 @@ teaching <- read_csv(here::here("data", "teaching.csv"))
 ## Presentations
 presentations <- read_csv(here::here("data", "presentations.csv"))
 
+## Grants
+grants <- read_csv(here::here("data", "grants.csv"))
+
 ## Awards
 awards <- read_csv(here::here("data", "awards.csv"))
 
@@ -84,7 +87,18 @@ jobs %>%
     why = details)
 ```
 
-# Research Awards and Honors
+# Research Funding
+
+```{r}
+grants %>% 
+  detailed_entries(what = with, 
+                   with = what, 
+                   when = when, 
+                   where = where, 
+                   why = amount)
+```
+
+# Research Awards and Honours
 
 ```{r}
 awards %>% 
@@ -120,20 +134,6 @@ service %>%
 ```{r}
 pubs %>% 
   dplyr::filter(type=="peer_review") %>% 
-  detailed_entries(
-    what = with,
-    when = when,
-    with = what,
-    where = where,
-    why = doi,
-    .protect = TRUE
-  )
-```
-
-## Submitted
-```{r}
-pubs %>% 
-  dplyr::filter(type=="submitted") %>% 
   detailed_entries(
     what = with,
     when = when,
