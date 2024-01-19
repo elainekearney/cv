@@ -1,13 +1,14 @@
 ---
-name: Elaine Kearney
-position: "Speech Scientist"
-address: "Brisbane, Australia"
-#phone: 
+name: Elaine Kearney, PhD
+position: "Postdoctoral Research Fellow"
+address: "Queensland University of Technology"
+phone: 0493-388-452
 www: elaine-kearney.com
-email: elainek.kearney@gmail.com
-twitter: ek_kearney
-github: elainekearney
-aboutme: "Speech scientist focused on the sensorimotor control of speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with communication disorders."
+email: "elaine.kearney@qut.edu.au"
+#orcid: 0000-0003-4456-1291
+#twitter: ek_kearney
+#github: elainekearney
+aboutme: "Speech scientist focused on the brain mechanisms underlying speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with speech disorders."
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
 output: vitae::awesomecv
@@ -117,6 +118,7 @@ affiliations %>%
                    when = glue("{start_date}--{end_date}"),
                    with = details)
 ```
+
 # Service
 
 ```{r}
@@ -127,8 +129,8 @@ service %>%
                    why = details,
                    where = where)
 ```
+
 # Publications
-*Available for download at https://elaine-kearney.com/publication/*
 
 ## Peer-Reviewed
 ```{r}
@@ -198,6 +200,18 @@ presentations %>%
                    .protect = TRUE)
 ```
 
+**Workshop**
+```{r}
+presentations %>%
+  dplyr::filter(loc=="workshop") %>%
+  detailed_entries(what = with, 
+                   when = when,
+                   with = glue("{what} ({type})"),
+                   where = where,
+                   why = why,
+                   .protect = TRUE)
+```
+
 ## National
 
 **Invited**
@@ -223,17 +237,7 @@ presentations %>%
                    why = why,
                    .protect = TRUE)
 ```
-## Workshops
-```{r}
-presentations %>%
-  dplyr::filter(loc=="workshop") %>%
-  detailed_entries(what = with, 
-                   when = when,
-                   with = glue("{what} ({type})"),
-                   where = where,
-                   why = why,
-                   .protect = TRUE)
-```
+
 
 # Software
 
