@@ -1,14 +1,14 @@
 ---
 name: Elaine Kearney, PhD
-position: "Postdoctoral Research Fellow"
-address: "Queensland University of Technology"
+position: "Conjoint Research Fellow"
+address: "University of Queensland and Princess Alexandra Hospital"
 phone: 0493-388-452
 www: elaine-kearney.com
-email: "elaine.kearney@qut.edu.au"
+email: "elainekatrina.kearney@uq.edu.au"
 #orcid: 0000-0003-4456-1291
 #twitter: ek_kearney
 #github: elainekearney
-aboutme: "Speech scientist focused on the brain mechanisms underlying speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with speech disorders."
+aboutme: "Conjoint Research Fellow building research capacity in speech pathology at the University of Queensland and Princess Alexandra Hospital. My background is as a speech pathologist and speech scientist, and my research focuses on the brain mechanisms underlying speech production in individuals with and without motor speech disorders. I conduct both basic science and clinical research that leverages my expertise in behavioral, computational modeling, and neuroimaging methods. The long-term aim of my research program is to expand the evidence-based treatment options available to those with speech disorders."
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "000000"
 output: vitae::awesomecv
